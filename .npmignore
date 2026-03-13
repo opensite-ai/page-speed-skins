@@ -1,0 +1,32 @@
+# Source files
+src/
+
+# Scripts (except for what's needed at runtime)
+scripts/
+
+# Development files
+.eslintrc.cjs
+.gitignore
+commitlint.config.cjs
+tsconfig.json
+vitest.config.ts
+
+# Documentation (kept: README.md, LICENSE, CHANGELOG.md)
+PAGE_SPEED_SKINS_BUILD_GUIDE.md
+
+# Git
+.git/
+.github/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Examples (kept for reference)
+# examples/

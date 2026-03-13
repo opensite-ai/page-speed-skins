@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@page-speed/skins - Vanilla JS Example</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+    }
+    video {
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>@page-speed/skins - Vanilla JS Example</h1>
+
+  <div id="video-container">
+    <video id="my-video" controls>
+      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="loadSkin('base')">Base Skin</button>
+    <button onclick="loadSkin('linear-inspired')">Linear Inspired</button>
+    <button onclick="loadSkin('minimal-hover')">Minimal Hover</button>
+    <button onclick="loadSkin('social-card')">Social Card</button>
+  </div>
+
+  <script type="module">
+    window.loadSkin = async (skinName) => {
+      const version = '0.1.0';
+      const url = `https://cdn.jsdelivr.net/npm/@page-speed/skins@${version}/skins/video/${skinName}.json`;
+
+      try {
+        const response = await fetch(url);
+        const skin = await response.json();
+
+        const container = document.getElementById('video-container');
+        const video = document.getElementById('my-video');
+
+        // Apply CSS variables
+        Object.entries(skin.tokens).forEach(([key, value]) => {
+          const cssVarName = key.startsWith('--') ? key : `--${key}`;
+          container.style.setProperty(cssVarName, value);
+        });
+
+        // Apply classes
+        if (skin.classes.video) {
+          video.className = skin.classes.video;
+        }
+
+        // Set data attributes
+        container.setAttribute('data-skin-id', skin.id);
+        container.setAttribute('data-skin-version', skin.version);
+
+        console.log('Applied skin:', skin.name);
+      } catch (err) {
+        console.error('Failed to load skin:', err);
+      }
+    };
+
+    // Load base skin on page load
+    loadSkin('base');
+  </script>
+</body>
+</html>

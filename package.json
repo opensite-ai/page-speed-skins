@@ -1,0 +1,99 @@
+{
+  "name": "@page-speed/skins",
+  "version": "0.1.0",
+  "description": "Lightweight JSON-based skin system for platform-wide component styling. CDN-accessible configuration files for video players, carousels, and more.",
+  "keywords": [
+    "skins",
+    "themes",
+    "styling",
+    "css-variables",
+    "tailwind",
+    "video-player",
+    "components",
+    "customization",
+    "page-speed",
+    "cdn",
+    "json-config"
+  ],
+  "homepage": "https://github.com/opensite-ai/page-speed-skins#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensite-ai/page-speed-skins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opensite-ai/page-speed-skins/issues"
+  },
+  "author": "OpenSite AI (https://opensite.ai)",
+  "license": "BSD-3-Clause",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "skins"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./runtime": {
+      "import": "./dist/runtime/index.js",
+      "require": "./dist/runtime/index.cjs",
+      "types": "./dist/runtime/index.d.ts"
+    },
+    "./adapters/video": {
+      "import": "./dist/adapters/video.js",
+      "require": "./dist/adapters/video.cjs",
+      "types": "./dist/adapters/video.d.ts"
+    },
+    "./skins/video/base.json": "./skins/video/base.json",
+    "./skins/video/linear-inspired.json": "./skins/video/linear-inspired.json",
+    "./skins/video/minimal-hover.json": "./skins/video/minimal-hover.json",
+    "./skins/video/social-card.json": "./skins/video/social-card.json"
+  },
+  "scripts": {
+    "build": "pnpm run build:lib && pnpm run validate:skins",
+    "build:lib": "tsc && node scripts/emit-cjs.js",
+    "build:watch": "tsc -w",
+    "clean": "rimraf dist",
+    "validate:skins": "node scripts/validate-skins.js",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest run",
+    "prepare": "husky",
+    "prepack": "pnpm run build",
+    "prepublishOnly": "pnpm run build && pnpm run test"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@types/node": "^20.17.6",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "^9.37.0",
+    "happy-dom": "^20.8.4",
+    "husky": "^9.1.7",
+    "typescript": "^5.6.2",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

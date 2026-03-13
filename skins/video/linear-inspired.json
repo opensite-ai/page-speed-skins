@@ -1,0 +1,48 @@
+{
+  "id": "video-linear-inspired",
+  "name": "Linear-Inspired Video Skin",
+  "version": "1.0.0",
+  "targets": ["video"],
+  "description": "Clean, modern video player skin inspired by Linear's design system",
+  "tokens": {
+    "--video-bg": "#0a0a0a",
+    "--video-controls-bg": "rgba(15, 15, 15, 0.95)",
+    "--video-controls-color": "#e4e4e7",
+    "--video-accent-color": "#8b5cf6",
+    "--video-timeline-bg": "rgba(228, 228, 231, 0.2)",
+    "--video-timeline-progress": "#8b5cf6",
+    "--video-timeline-buffered": "rgba(228, 228, 231, 0.4)",
+    "--video-control-hover": "rgba(139, 92, 246, 0.1)",
+    "--video-border-radius": "12px",
+    "--video-control-size": "36px",
+    "--video-transition": "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    "--video-shadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+  },
+  "classes": {
+    "container": "relative w-full overflow-hidden rounded-xl bg-zinc-950 shadow-lg",
+    "video": "w-full h-full object-contain",
+    "controlsBar": "absolute bottom-0 left-0 right-0 flex items-center gap-3 px-4 py-3 bg-zinc-900/95 backdrop-blur-md border-t border-zinc-800",
+    "playButton": "flex items-center justify-center w-9 h-9 rounded-lg hover:bg-violet-500/10 transition-all duration-200 cursor-pointer text-zinc-200 hover:text-violet-400",
+    "timeline": "flex-1 h-1.5 bg-zinc-700/20 rounded-full cursor-pointer relative hover:h-2 transition-all duration-200",
+    "timelineProgress": "absolute inset-y-0 left-0 bg-violet-500 rounded-full pointer-events-none transition-all duration-100",
+    "timelineBuffered": "absolute inset-y-0 left-0 bg-zinc-600/40 rounded-full pointer-events-none",
+    "timeText": "text-xs text-zinc-400 font-mono tabular-nums",
+    "volumeControl": "flex items-center gap-2",
+    "fullscreenButton": "flex items-center justify-center w-9 h-9 rounded-lg hover:bg-violet-500/10 transition-all duration-200 cursor-pointer text-zinc-200 hover:text-violet-400",
+    "settingsButton": "flex items-center justify-center w-9 h-9 rounded-lg hover:bg-violet-500/10 transition-all duration-200 cursor-pointer text-zinc-200 hover:text-violet-400",
+    "loadingSpinner": "absolute inset-0 flex items-center justify-center bg-zinc-950/80 backdrop-blur-sm",
+    "playOverlay": "absolute inset-0 flex items-center justify-center bg-zinc-950/40 cursor-pointer hover:bg-zinc-950/50 transition-all duration-200 group",
+    "playOverlayButton": "w-16 h-16 rounded-full bg-violet-500/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-200"
+  },
+  "assets": {
+    "playIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E",
+    "pauseIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6 4h4v16H6V4zm8 0h4v16h-4V4z'/%3E%3C/svg%3E",
+    "volumeIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z'/%3E%3C/svg%3E",
+    "fullscreenIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z'/%3E%3C/svg%3E"
+  },
+  "metadata": {
+    "author": "OpenSite AI",
+    "license": "BSD-3-Clause",
+    "tags": ["linear", "modern", "clean", "purple"]
+  }
+}
