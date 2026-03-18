@@ -1,6 +1,6 @@
 {
   "name": "@page-speed/skins",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Lightweight JSON-based skin system for platform-wide component styling. CDN-accessible configuration files for video players, carousels, and more.",
   "keywords": [
     "skins",

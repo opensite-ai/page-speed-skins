@@ -1,43 +1,44 @@
 {
   "id": "video-base",
   "name": "Base Video Skin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "targets": ["video"],
-  "description": "Minimal base skin with essential styling for video players",
+  "description": "Clean base skin with light controls and modern styling for video players",
   "tokens": {
     "--video-bg": "#000000",
-    "--video-controls-bg": "rgba(0, 0, 0, 0.7)",
-    "--video-controls-color": "#ffffff",
-    "--video-accent-color": "#3b82f6",
-    "--video-timeline-bg": "rgba(255, 255, 255, 0.3)",
-    "--video-timeline-progress": "#3b82f6",
-    "--video-timeline-buffered": "rgba(255, 255, 255, 0.5)",
-    "--video-control-hover": "rgba(255, 255, 255, 0.2)",
+    "--video-controls-bg": "rgba(255, 255, 255, 0.95)",
+    "--video-controls-color": "#1f2937",
+    "--video-accent-color": "#10b981",
+    "--video-timeline-bg": "rgba(209, 213, 219, 0.6)",
+    "--video-timeline-progress": "#10b981",
+    "--video-timeline-buffered": "rgba(156, 163, 175, 0.4)",
+    "--video-control-hover": "rgba(0, 0, 0, 0.05)",
     "--video-border-radius": "8px",
-    "--video-control-size": "40px"
+    "--video-control-size": "36px"
   },
   "classes": {
     "container": "relative w-full overflow-hidden rounded-lg bg-black",
     "video": "w-full h-full object-contain",
-    "controlsBar": "absolute bottom-0 left-0 right-0 flex items-center gap-2 px-4 py-2 bg-black/70 backdrop-blur-sm",
-    "playButton": "flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors cursor-pointer",
-    "timeline": "flex-1 h-1 bg-white/30 rounded-full cursor-pointer relative",
-    "timelineProgress": "absolute inset-y-0 left-0 bg-blue-500 rounded-full pointer-events-none",
-    "timelineBuffered": "absolute inset-y-0 left-0 bg-white/50 rounded-full pointer-events-none",
-    "timeText": "text-sm text-white font-mono",
-    "volumeControl": "flex items-center gap-2",
-    "fullscreenButton": "flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors cursor-pointer",
-    "settingsButton": "flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors cursor-pointer",
+    "controlsBar": "absolute bottom-0 left-0 right-0 flex items-center gap-3 px-4 py-2.5 bg-white/95 backdrop-blur-sm border-t border-gray-200",
+    "playButton": "flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors cursor-pointer text-gray-800",
+    "timeline": "flex-1 h-1.5 bg-gray-300/60 rounded-full cursor-pointer relative",
+    "timelineProgress": "absolute inset-y-0 left-0 bg-emerald-500 rounded-full pointer-events-none",
+    "timelineBuffered": "absolute inset-y-0 left-0 bg-gray-400/40 rounded-full pointer-events-none",
+    "timeText": "text-sm text-gray-700 font-mono",
+    "volumeControl": "flex items-center gap-2 text-gray-700",
+    "fullscreenButton": "flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors cursor-pointer text-gray-800",
+    "settingsButton": "flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors cursor-pointer text-gray-800",
     "loadingSpinner": "absolute inset-0 flex items-center justify-center bg-black/50",
-    "playOverlay": "absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors"
+    "playOverlay": "absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer hover:bg-black/40 transition-colors",
+    "playOverlayButton": "w-16 h-16 rounded-full bg-white/95 flex items-center justify-center shadow-lg hover:bg-white transition-colors"
   },
   "assets": {
-    "playIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E",
-    "pauseIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6 4h4v16H6V4zm8 0h4v16h-4V4z'/%3E%3C/svg%3E"
+    "playIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f2937'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E",
+    "pauseIcon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f2937'%3E%3Cpath d='M6 4h4v16H6V4zm8 0h4v16h-4V4z'/%3E%3C/svg%3E"
   },
   "metadata": {
     "author": "OpenSite AI",
     "license": "BSD-3-Clause",
-    "tags": ["base", "minimal", "default"]
+    "tags": ["base", "minimal", "default", "light"]
   }
 }
